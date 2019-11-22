@@ -9,20 +9,25 @@
 <h1>Car List</h1>
 <a href="addCar">Add a Car to the list :</a>
 <br/><br/>
-<div>
-    <table border="1">
-        <tr>
-            <th>Id</th>
-            <th>Brand</th>
-            <th>Name</th>
 
+<div class="table100-head">
+    <table>
+        <thead>
+        <tr class="row100 head">
+            <th class="column1">N°</th>
+            <th class="column2">Brand</th>
+            <th class="column3">Type</th>
         </tr>
         <tr th:each ="car : ${cars}">
             <td th:utext="${car.id}">...</td>
             <td th:utext="${car.brand}">...</td>
             <td th:utext="${car.name}">...</td>
         </tr>
+        </thead>
     </table>
 </div>
+
+
+
 </body>
 </html>
